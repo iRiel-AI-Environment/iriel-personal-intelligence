@@ -21,7 +21,7 @@ export const EXPERIENCES: Experience[] = [
 export const EXPERIENCE_IDS = EXPERIENCES.map((e) => e.id) as [ExperienceId, ...ExperienceId[]];
 
 export function getExperience(id: ExperienceId) {
-  return EXPERIENCES.find((e) => e.id === id) ?? EXPERIENCES[0];
+  return (EXPERIENCES.find((e) => e.id === id) ?? EXPERIENCES[0])!;
 }
 
 /**

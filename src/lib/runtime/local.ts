@@ -24,8 +24,9 @@ export function localRespond(messages: UIMessage[]): string {
   const remember = text.match(/^(?:please\s+)?remember(?:\s+that)?\s+(.+)/i);
   if (remember) {
     if (!settings.memoryEnabled) return "Memory is turned off in iSpace → Memory, so I won't keep this.";
-    void addMemory(remember[1].replace(/[.!]+$/, ""), "chat");
-    return `Saved to memory, on this device only:\n\n> ${remember[1].replace(/[.!]+$/, "")}`;
+    const fact = (remember[1] ?? "").replace(/[.!]+$/, "");
+    void addMemory(fact, "chat");
+    return `Saved to memory, on this device only:\n\n> ${fact}`;
   }
   if (/what do you (know|remember) about me|my memories/.test(lower)) {
     const mems = getData().memories;
@@ -109,7 +110,7 @@ export function localRespond(messages: UIMessage[]): string {
   // Planning
   const plan = text.match(/(?:help me )?plan(?:\s+(?:for|my|a|an|the))?\s+(.+)/i);
   if (plan) {
-    const goal = plan[1].replace(/[.?!]+$/, "");
+    const goal = (plan[1] ?? "").replace(/[.?!]+$/, "");
     return [
       `A starting plan for **${goal}**:`,
       "",

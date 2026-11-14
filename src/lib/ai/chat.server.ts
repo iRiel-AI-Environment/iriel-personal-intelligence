@@ -121,7 +121,7 @@ function errorCode(error: unknown) {
 }
 
 export async function handleChat(request: Request) {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) return Response.json({ error: "IRIEL_CONFIG" }, { status: 500 });
 
   let body: ChatBody;

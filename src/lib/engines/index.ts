@@ -18,16 +18,16 @@ export function parseBang(text: string): { engine: SearchEngine; query: string; 
   const re = /(^|\s)!([a-z0-9]+)(?=\s|$)/i;
   const m = text.match(re);
   if (!m) return null;
-  const engine = findEngine(m[2]);
+  const engine = findEngine(m[2] ?? "");
   if (!engine) return null;
   const query = text.replace(re, " ").replace(/\s+/g, " ").trim();
-  return { engine, query, shortcut: m[2].toLowerCase() };
+  return { engine, query, shortcut: (m[2] ?? "").toLowerCase() };
 }
 
 /** The "!partial" token being typed at the end of the prompt, for autocomplete. */
 export function bangInProgress(text: string): string | null {
   const m = text.match(/(?:^|\s)!([a-z0-9]*)$/i);
-  return m ? m[1].toLowerCase() : null;
+  return m ? (m[1] ?? "").toLowerCase() : null;
 }
 
 export function suggestEngines(partial: string, limit = 8) {

@@ -77,7 +77,7 @@ export function matchKnowledge(
       const re = new RegExp(`(^|[^a-z0-9+#.])${escape(kw)}($|[^a-z0-9+#])`, "i");
       const m = lower.match(re);
       if (m) {
-        const idx = (m.index ?? 0) + m[1].length;
+        const idx = (m.index ?? 0) + (m[1]?.length ?? 0);
         out.push({ source, term: text.slice(idx, idx + kw.length) });
         break;
       }

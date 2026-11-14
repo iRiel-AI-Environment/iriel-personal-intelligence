@@ -24,7 +24,7 @@ export function ExperiencePicker({
   compact?: boolean;
 }) {
   const t = useT();
-  const current = getExperience(value);
+  const current = getExperience(value)!;
   const isPrivate = value === "private";
   return (
     <DropdownMenu>

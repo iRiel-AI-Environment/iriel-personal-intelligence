@@ -92,7 +92,7 @@ export function useVoice(opts: {
     manualStop.current = false;
     rec.onresult = (e) => {
       let text = "";
-      for (let i = 0; i < e.results.length; i++) text += e.results[i][0].transcript;
+      for (let i = 0; i < e.results.length; i++) text += e.results[i]?.[0]?.transcript ?? "";
       textRef.current = text;
       optsRef.current.onText(text);
     };

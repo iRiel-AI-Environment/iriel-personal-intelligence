@@ -181,7 +181,7 @@ export function vaultUsed(files = state.files) {
 }
 
 export function vaultQuota() {
-  return PLANS.find((p) => p.id === getSettings().plan)?.bytes ?? PLANS[0].bytes;
+  return PLANS.find((p) => p.id === getSettings().plan)?.bytes ?? PLANS[0]!.bytes;
 }
 
 export function categoryFor(file: File | { type: string }, projectId?: string): VaultCategory {
