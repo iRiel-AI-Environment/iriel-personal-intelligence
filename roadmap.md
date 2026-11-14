@@ -1,16 +1,18 @@
 # iRiel roadmap
 
-- [ ] Design system, Presence orb (idle / listening / thinking / response)
-- [ ] App shell: traffic lights, wordmark, search, iSpace pill, avatar, collapsible sidebar, mobile menu
-- [ ] Home hero + composer + suggestion pills + footer
-- [ ] Chat threads (local-first), AI streaming via gateway, rich cards + source badges, web search
-- [ ] Private experience on local runtime (no network)
-- [ ] Voice input (listening state)
-- [ ] iVault: uploads, quota, plans, runtime-owned assets, indexing states
-- [ ] Projects, Agents, Devices pages
-- [ ] iSpace: Profile, Memory, Connections, Devices, Agents, Customization, Privacy, About
-- [ ] Multilingual UI (EN, PT, ES, FR, DE, IT, JA, ZH)
-- [ ] Search engine catalog (iriel.engines.intelligence): "!" shortcut autocomplete + preview, direct routing / federated search, quick engine picker in search bar and an iSpace "Search" section
-- [ ] Head metadata, tests, screenshots at 1280x832 / 1133x744 / 744x1133 / 393x764
-- [ ] Knowledge Engine: canonical tech-doc sources (HTML, CSS, JS, React... Azure); iSpace "Knowledge" collections section; recommended-docs cards with direct links + contextual citations in Developer experience and tech searches
-- [ ] Fix type error in src/components/ai-elements/code-block.tsx(532,5) so the build is clean
+Done
+- [x] Design system (OLED black, glass), Presence orb (idle / listening / thinking states drawn)
+- [x] Home: hero, composer pill, suggestion pills, footer, "!" shortcut autocomplete + direct routing
+- [x] Search engine catalog + shortcut parser (tested)
+- [x] Knowledge sources catalog + matcher (tested)
+- [x] iVault plan quotas (tested), on-device storage layer, Private local runtime, AI chat endpoint, voice hook
+- [x] Interface text in EN, PT, ES, FR, DE, IT, JA, ZH
+- [x] code-block.tsx type error and other chat-component type errors fixed; build clean
+
+Open
+- [ ] App shell: sidebar (draft in src/components/shell/Sidebar.tsx.draft), topbar avatar link (UserAvatar.tsx.draft), mobile menu, search palette
+- [ ] Chat page (/chat/$threadId): streaming, rich cards, source badges, docs cards, "Also search on" engines — blocked for live AI by workspace AI credits (402)
+- [ ] Wire home composer to chat, voice listening state, attachments
+- [ ] iVault page, Projects, Agents, Devices (mountain photo ready at src/assets/presence-mountains.jpg)
+- [ ] iSpace: Profile, Memory, Connections, Devices, Agents, Customization, Privacy, About, Search engines, Knowledge Collections
+- [ ] Screenshots at all four canvases and mockup comparison
