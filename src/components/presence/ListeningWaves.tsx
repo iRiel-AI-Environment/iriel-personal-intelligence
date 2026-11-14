@@ -19,11 +19,10 @@ export function ListeningWaves({ level, className }: { level: number; className?
         const freq = 0.018 + layer * 0.006;
         const phase = t / (420 - layer * 80) + layer;
         let d = "";
-        for (let x = 0; x <= 400; x += 8) {
-          const fade = Math.sin((x / 400) * Math.PI) ** 1.4;
-          const y = 50 + Math.sin(x * freq + phase * side) * amp * fade;
-          const px = side < 0 ? 400 - x : x;
-          d += `${x === 0 ? "M" : "L"}${(side < 0 ? px - 400 : px + 0).toFixed(1)} ${y.toFixed(2)} `;
+        for (let x = 0; x <= 400; x += 6) {
+          const fade = Math.pow(1 - x / 400, 1.3) * Math.min(1, x / 70);
+          const y = 50 + Math.sin(x * freq - phase) * amp * fade;
+          d += `${x === 0 ? "M" : "L"}${(side * x).toFixed(1)} ${y.toFixed(2)} `;
         }
         p.setAttribute("d", d);
       });
