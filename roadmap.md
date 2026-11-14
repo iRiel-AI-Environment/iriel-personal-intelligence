@@ -12,3 +12,5 @@
 - [ ] Multilingual UI (EN, PT, ES, FR, DE, IT, JA, ZH)
 - [ ] Search engine catalog (iriel.engines.intelligence): "!" shortcut autocomplete + preview, direct routing / federated search, quick engine picker in search bar and an iSpace "Search" section
 - [ ] Head metadata, tests, screenshots at 1280x832 / 1133x744 / 744x1133 / 393x764
+- [ ] Knowledge Engine: canonical tech-doc sources (HTML, CSS, JS, React... Azure); iSpace "Knowledge" collections section; recommended-docs cards with direct links + contextual citations in Developer experience and tech searches
+- [ ] Fix type error in src/components/ai-elements/code-block.tsx(532,5) so the build is clean
