@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as IspaceIndexRouteImport } from './routes/ispace.index'
+import { Route as IspaceSectionRouteImport } from './routes/ispace.$section'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +24,49 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IspaceIndexRoute = IspaceIndexRouteImport.update({
+  id: '/ispace/',
+  path: '/ispace/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IspaceSectionRoute = IspaceSectionRouteImport.update({
+  id: '/ispace/$section',
+  path: '/ispace/$section',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/api/chat': typeof ApiChatRoute
+  '/ispace/$section': typeof IspaceSectionRoute
+  '/ispace/': typeof IspaceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/api/chat': typeof ApiChatRoute
+  '/ispace/$section': typeof IspaceSectionRoute
+  '/ispace': typeof IspaceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/api/chat': typeof ApiChatRoute
+  '/ispace/$section': typeof IspaceSectionRoute
+  '/ispace/': typeof IspaceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/chat'
+  fullPaths: '/' | '/api/chat' | '/ispace/$section' | '/ispace/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/chat'
-  id: '__root__' | '/' | '/api/chat'
+  to: '/' | '/api/chat' | '/ispace/$section' | '/ispace'
+  id: '__root__' | '/' | '/api/chat' | '/ispace/$section' | '/ispace/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApiChatRoute: typeof ApiChatRoute
+  IspaceSectionRoute: typeof IspaceSectionRoute
+  IspaceIndexRoute: typeof IspaceIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +85,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ispace/': {
+      id: '/ispace/'
+      path: '/ispace'
+      fullPath: '/ispace/'
+      preLoaderRoute: typeof IspaceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ispace/$section': {
+      id: '/ispace/$section'
+      path: '/ispace/$section'
+      fullPath: '/ispace/$section'
+      preLoaderRoute: typeof IspaceSectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApiChatRoute: ApiChatRoute,
+  IspaceSectionRoute: IspaceSectionRoute,
+  IspaceIndexRoute: IspaceIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
