@@ -178,6 +178,7 @@ function Profile() {
     updateSettings((s) => ({ profile: { ...s.profile, [editing!]: draft.trim() } }));
     setEditing(null);
     toast(t("profile.saved"));
+    return undefined;
   };
 
   return (
