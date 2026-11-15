@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { UserAvatar } from "@/components/shell/UserAvatar";
 import { useEffect, useState } from "react";
 import { ArrowUp, Mic, Plus, Search } from "lucide-react";
 import { toast } from "sonner";
@@ -54,8 +55,8 @@ function Home() {
           <button type="button" aria-label={t("nav.search")} className="grid size-9 place-items-center rounded-full text-muted-foreground hover:text-foreground">
             <Search className="size-[18px]" />
           </button>
-          <span className="hidden h-9 items-center rounded-full border border-hairline-strong bg-glass px-4 text-sm md:inline-flex">iSpace</span>
-          <span className="grid size-9 place-items-center rounded-full border border-hairline-strong bg-glass-strong text-sm">R</span>
+          <Link to="/ispace/$section" params={{ section: "profile" }} className="hidden h-9 items-center rounded-full border border-hairline-strong bg-glass px-4 text-sm hover:bg-glass-strong md:inline-flex">iSpace</Link>
+          <UserAvatar />
         </div>
       </header>
 
