@@ -1,65 +1,520 @@
-# iRiel Personal Intelligence
 
-Desenvolver o iRiel AppWeb vNext — Personal Intelligence Environment (PIE) criado pela Robert Software Labs, com inteligência nativa disponível desde o primeiro segundo, orbe de presença iridescente, iSpace integrado, armazenamento pessoal iVault isolado de dados de runtime, e arquitetura de experiências (Everyday, Thinking, Research, Creative, Developer, Private).
+# iRiel AI - Personal Intelligence Environment
 
-### Locked
-- Seguir estritamente a identidade visual e o design system das imagens anexadas (IMG_0075.png e IMG_0071.jpeg): fundo preto OLED profundo (#000000 / #050505), estética de vidro fosco (frosted glass) com bordas sutis e tipografia limpa estilo Apple/VisionOS.
-- Orbe de Presença Central ("Presence"): cápsula horizontal de vidro iridescente com feixe de luz cromática interna (conforme IMG_0071.jpeg). Deve ter estados visuais fluidos:
-  1. Estado Idle/Presença: respiração luminosa suave e reflexos de vidro.
-  2. Estado Listening (voz): linhas de ondas acústicas etéreas emanando horizontalmente da pílula com o texto "Listening..." e controles de áudio (microfone ativo e botão de parar em vermelho, como em IMG_0075.png).
-  3. Estado Thinking/Processing: pulso cromático dinâmico no núcleo da cápsula.
-  4. Estado Resposta: recolhe suavemente para o cabeçalho mantendo o feedback de presença ativo.
-- Tela Inicial / Hero:
-  - Título central: "Ask or Search with iRiel".
-  - Barra de comando flutuante tipo pílula com botão "+" (anexos), input ("Ask or search..."), botão de microfone e seta de envio.
-  - Pílulas de sugestão rápida abaixo da barra: "Summarize this for me", "Search the web", "Work with my files", "Help me plan", "Brainstorm ideas".
-  - Rodapé fixo: "iRiel · Human first. Always." à esquerda e "A PRSL-AI creation" à direita.
-- Topbar e Navegação:
-  - Controles de janela macOS (traffic lights: vermelho, amarelo, verde) no topo esquerdo.
-  - Wordmark "iRiel" elegante.
-  - Controles à direita: ícone de busca rápida, botão pílula "iSpace", e avatar de perfil circular "R" (Robert).
-- Dock / Barra Lateral Esquerda (recolhível):
-  - Ícones e rótulos: New Chat, Search, Files, Projects, Agents, Devices, Settings.
-- Interface do iSpace (ambiente pessoal integrado):
-  - Cabeçalho: "iSpace - Your personal intelligence environment." com botão voltar e avatar do usuário.
-  - Badge de Presença interna: mini cápsula iridescente com "iRiel · Always with you.".
-  - Seções de navegação lateral: Profile, Memory, Connections, Devices, Agents, Customization, Privacy, About.
-  - Painel de Perfil com dados do usuário: Name (Robert), Email (robert@prsl.ai), Timezone (Lisbon (WET)), Language (English / seletor multilíngue).
-- Arquitetura de Memória e iVault:
-  - Gerenciador do iVault com visualização de quota e planos (Free 16 GB, Standard 50 GB, Plus 1 TB, Advanced 2 TB).
-  - Regra canônica do IRC-001 implementada: arquivos pessoais (Docs, Mídia, Projetos) usam o iVault; pesos de modelos, caches de inferência e índices vetoriais NUNCA consomem espaço do usuário.
-- Seletor de Experiências (Experience Contract):
-  - Experiências nativas selecionáveis: Everyday, Thinking, Research, Creative, Developer e Private.
-  - Modo Private: isolamento estrito local, com badge visual explícito confirmando zero telemetria e zero chamadas externas de federação.
-- Fluxo de Conversação com Cards Ricos:
-  - Visualização de chat (conforme o quadrante superior direito de IMG_0075.png): cartões organizados em colunas com resumos, tópicos e badges de fontes verificadas (The Verge, OpenAI, Google DeepMind, etc.).
-- Responsividade completa:
-  - Desktop (1280x832), Tablet e Mobile (393x764) com navegação adaptada e presença contínua ("Presence across every device. One iRiel. Everywhere.").
+**Created by Robert Software Labs**  
+**Product:** iRiel Personal Intelligence Environment (PIE)  
+**Architecture:** PRSL-AI Ecosystem v6.3  
+**Project:** Existing Lovable project  
+**Implementation target:** Production-oriented, fully functional application
 
-### Open
-- O builder decide e implementa o fluxo de dados simulados de alto nível para permitir testar todas as experiências e uploads no iVault.
-- Suporte multilíngue funcional com alternância fluida entre os idiomas principais da especificação (Português, Inglês, Espanhol, Francês, Alemão, Japonês, etc.).
-- Ações interativas completas para alternar entre busca web, arquivos e planejamento.
+Build and evolve the existing iRiel AppWeb into a complete Personal Intelligence Environment. This must be a real working application, not a clickable prototype or a collection of disconnected screens.
 
-build a real working app, not a clickable prototype; the screen and kit files show layout, content and look (a wireframe's, structure only) and are never code to copy. The screens are the moments the user designed, not the whole product. Before building, walk through each flow as its user would and design what the pictures leave out, as a product designer would for this product: the steps a flow needs to finish and how the app responds to what the user does, including the moments its users will actually run into, like waiting on something or finding nothing yet. Add nothing a user of this product would never meet, and keep an app the user wants simple, simple. Never leave a step the product's core flows need as "coming soon", unless the brief says the user chose to. Where such a step needs an outside service, build every part up to it and say in your reply what's left to connect. Fill product gaps only, never a look the design set: an added step reuses the UI kit's tokens, chrome and parts and the nearest designed screen's layout, with no new visual direction. Look at every screen's picture before writing code; design.md says which picture or sheet holds each screen. Open the UI kit's shells and parts HTML for the header, tab bar, composer and components, not only its tokens. Use each finished screen's copy exactly as design.md lists it; never invent copy for one. A wireframe under design.md's Wireframes gives structure only: build it in the design's look, as design.md says. The screens' photos are placeholders for the mockups only: replace every photo design.md lists with the user's own upload for it, else as design.md says (a photo without people re-composed with imagegen--edit_image from it as a reference, a photo of people generated from its brief and never from the photo), and ship no set photo or its URL. Build and check each screen at the canvas it was drawn at: phone 393×764, tablet landscape 1133×744, tablet portrait 744×1133, desktop 1280×832. After building, screenshot the app at those sizes and states, compare each finished screen with its picture, and fix every visual difference you didn't choose; check a wireframe's screen against its structure, never its grey look. End your reply with "Changed from the mockups": each deliberate change and why, and "Added beyond the mockups": each step, state or interaction you built that no screen shows.
+Preserve the existing project architecture, working functionality, canonical contracts, and visual identity.
 
-This project was built with [Lovable](https://lovable.dev).
+## 1. ARCHITECTURAL FOUNDATION
 
-## Build with Lovable
+Follow PRSL-AI Ecosystem v6.3 as the authoritative architectural baseline.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/dc9c3852-878f-4f3a-ba48-e27b3366af5d).
+Respect these architectural definitions:
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **iRiel Personal Intelligence:** Personal intelligence, contextual understanding, reasoning, and interaction.
+- **iRiel Resonance:** Continuity across time, devices, environments, models, and capabilities.
+- **Memory:** Persistent contextual information governed by user authorization and privacy policies.
+- **iSpace:** Integrated personal environment within iRiel.
+- **iVault:** Isolated personal storage.
+- **iApps:** Native applications and capabilities available within iRiel.
+- **iRiel Devices:** Hardware and platform family integrating with the iRiel environment.
 
-## Development
+These are not interchangeable concepts. Do not create duplicate architectural layers or independent applications.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Use existing PRSL-AI contracts and capabilities. Do not reinvent Router, Policy Engine, Runtime, Provider Resolution, or other already-defined architectural responsibilities.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Maintain:
+- Human First.
+- Privacy by Default.
+- Provider Agnosticism.
+- Local-First Processing.
+- User Sovereignty.
+- Accessibility and Inclusion.
+- Contextual Continuity.
+- Interoperability.
+
+## 2. VISUAL DESIGN — LOCKED
+
+Use the supplied design references:
+
+- IMG_0075.png
+- IMG_0071.jpeg
+
+Before writing code, inspect every relevant image, design.md, UI kit tokens, shell HTML, component HTML, and parts HTML.
+
+Follow the existing visual language precisely:
+
+- OLED black backgrounds: #000000 / #050505.
+- Frosted glass surfaces.
+- Subtle translucent borders.
+- Restrained iridescent lighting.
+- Clean Apple/VisionOS-inspired typography.
+- Minimalist spatial composition.
+- Smooth transitions.
+- Consistent spacing and component proportions.
+
+Do not introduce a new visual direction.
+
+Reference images define the intended appearance and interaction moments, not the complete application implementation.
+
+## 3. CENTRAL PRESENCE
+
+Implement the central iRiel Presence as a horizontal iridescent glass capsule with an internal chromatic light beam.
+
+Support four real interaction states:
+
+**Idle**
+- Soft breathing illumination.
+- Subtle glass reflections.
+- Continuous ambient presence.
+
+**Listening**
+- Horizontal acoustic waveforms.
+- "Listening..." indicator.
+- Active microphone control.
+- Red stop button.
+- Actual microphone permission and capture handling.
+
+**Thinking**
+- Dynamic chromatic pulse.
+- Processing animation.
+- Accurate execution feedback.
+
+**Responding**
+- Smooth transition into compact header presence.
+- Persistent visual feedback.
+
+Animations must reflect actual application states.
+
+## 4. HOME SCREEN
+
+Main heading:
+
+**Ask or Search with iRiel**
+
+Implement a floating command composer containing:
+
+- Attachment button (+).
+- Input: "Ask or search..."
+- Microphone button.
+- Send button.
+
+Quick suggestions:
+
+- Summarize this for me
+- Search the web
+- Work with my files
+- Help me plan
+- Brainstorm ideas
+
+Implement actual actions for every suggestion.
+
+The composer must support text, voice, attachments, submission, cancellation, loading, and error states.
+
+Footer:
+
+Left: "iRiel · Human first. Always."
+
+Right: "A PRSL-AI creation"
+
+## 5. APPLICATION NAVIGATION
+
+### Topbar
+
+- macOS-inspired window controls.
+- iRiel wordmark.
+- Quick search.
+- iSpace access button.
+- Circular user avatar.
+
+### Left navigation dock
+
+Implement a collapsible navigation sidebar:
+
+1. New Chat
+2. Search
+3. Files
+4. Projects
+5. Agents
+6. Devices
+7. Settings
+
+Support active states, keyboard navigation, responsive behavior, and functional navigation.
+
+## 6. iSPACE — INTEGRATED ENVIRONMENT
+
+Implement iSpace as an integrated area of iRiel, not a separate application.
+
+Header:
+
+**iSpace — Your personal intelligence environment.**
+
+Include:
+- Back navigation.
+- User avatar.
+- Internal Presence capsule.
+- "iRiel · Always with you."
+
+Navigation sections:
+
+- Profile
+- Memory
+- Connections
+- Devices
+- Agents
+- Customization
+- Privacy
+- About
+
+Each section must have a functional interface.
+
+### Profile
+
+Support:
+
+- Name.
+- Email.
+- Timezone.
+- Language.
+- Personal preferences.
+
+Load authenticated user information when available. Do not invent account information or hardcode example credentials as real user data.
+
+## 7. iVAULT — PERSONAL STORAGE
+
+Implement iVault as an isolated environment for user-owned content.
+
+Categories:
+
+- Documents.
+- Media.
+- Projects.
+- Personal resources.
+
+### Canonical IRC-001 storage separation
+
+Personal content belongs to iVault.
+
+The following must never consume user iVault quota:
+
+- Model weights.
+- Inference caches.
+- Temporary runtime data.
+- Internal vector indexes.
+- System-managed intelligence resources.
+- Infrastructure artifacts.
+
+Implement actual storage isolation, independent accounting, and appropriate lifecycle management.
+
+Do not simply exclude infrastructure resources from the visual quota calculation while storing everything in the same user-controlled storage boundary.
+
+### Storage interface
+
+Implement:
+
+- Total quota.
+- Used storage.
+- Available storage.
+- Category breakdown.
+- Upload progress.
+- File preview.
+- Download.
+- Rename.
+- Delete.
+- Search.
+- Sorting.
+- Empty states.
+- Storage-limit handling.
+
+Configurable product tiers:
+
+- Free — 16 GB.
+- Standard — 50 GB.
+- Plus — 1 TB.
+- Advanced — 2 TB.
+
+These are proposed plan definitions. Do not claim subscription activation, payment processing, or actual entitlement without the corresponding backend integration.
+
+## 8. EXPERIENCE CONTRACT
+
+Implement six selectable native experiences:
+
+- Everyday
+- Thinking
+- Research
+- Creative
+- Developer
+- Private
+
+Experiences define interaction behavior, contextual handling, presentation, and authorized capability selection.
+
+They are not separate agents, applications, or architectural foundations.
+
+### Everyday
+General personal assistance and daily interactions.
+
+### Thinking
+Deeper reasoning, structured analysis, and problem-solving.
+
+### Research
+Research, source discovery, evidence organization, and synthesis.
+
+### Creative
+Writing, ideation, and creative workflows.
+
+### Developer
+Programming, architecture, debugging, and technical workflows.
+
+### Private
+Strictly isolated local execution.
+
+Private requirements:
+
+- Local-only execution.
+- No external provider calls.
+- No federation calls.
+- No telemetry.
+- No implicit external synchronization.
+- Explicit isolation status.
+- Verified availability of local capabilities.
+
+Block unauthorized external execution at the actual execution boundary.
+
+Never display a privacy guarantee that the runtime cannot verify.
+
+Do not silently switch to an external provider when local execution is unavailable.
+
+## 9. CONVERSATION EXPERIENCE
+
+Implement a functional conversation environment with:
+
+- Conversation history.
+- Context continuity.
+- Streaming responses when supported.
+- Cancellation.
+- Retry.
+- Message actions.
+- File attachments.
+- Source references.
+- Conversation organization.
+- Loading states.
+- Error handling.
+
+### Rich response cards
+
+Support structured cards containing:
+
+- Summaries.
+- Topics.
+- Key findings.
+- References.
+- Source metadata.
+- Relevant actions.
+
+Support verified sources such as The Verge, OpenAI, Google DeepMind, and other actual retrieved sources.
+
+Never fabricate source identities, citations, verification badges, or URLs.
+
+Cards must follow the approved design system.
+
+## 10. NATIVE INTELLIGENCE
+
+iRiel must provide operational intelligence from the first interaction.
+
+Integrate with existing PRSL-AI capabilities and contracts.
+
+Implement:
+
+- Intent interpretation.
+- Context management.
+- Capability discovery.
+- Provider resolution.
+- Policy evaluation.
+- Authorized execution.
+- Response streaming where supported.
+- Error recovery.
+
+Maintain provider agnosticism.
+
+Do not make a single AI provider the architectural foundation.
+
+Do not duplicate existing PRSL-AI infrastructure.
+
+If an external service is unavailable, implement the complete application-side workflow up to its integration boundary.
+
+Clearly distinguish real execution from development fixtures.
+
+Never present simulated intelligence as a real model response.
+
+## 11. MULTILINGUAL SUPPORT
+
+Implement functional localization for:
+
+- English.
+- Portuguese.
+- Spanish.
+- French.
+- German.
+- Japanese.
+
+Prepare the localization architecture for additional languages.
+
+Requirements:
+
+- Dynamic language switching.
+- Persistent language preference.
+- Localized navigation.
+- Localized interface labels.
+- Localized empty states.
+- Localized errors.
+- Date and number formatting.
+- RTL support where required.
+
+Use a centralized localization architecture instead of scattered hardcoded strings.
+
+## 12. REQUIRED INTERACTION FLOWS
+
+Implement these complete workflows:
+
+### Personal conversation
+Input → Intent interpretation → Capability resolution → Policy evaluation → Authorized execution → Response → Context continuity.
+
+### Web research
+Research request → Capability selection → External authorization → Source retrieval → Evidence presentation → References.
+
+### iVault upload
+File selection → Validation → Storage resolution → Upload → Progress → Confirmation → File listing.
+
+### Experience switching
+Experience selection → Contract loading → Policy evaluation → Environment update → Confirmation.
+
+### Private execution
+Private activation → Local capability verification → Isolation enforcement → External execution blocking → Authorized local execution → Verified status.
+
+### iSpace management
+Section selection → Data loading → User modification → Validation → Authorization → Persistence → Updated interface.
+
+Every flow must have appropriate loading, success, failure, cancellation, and empty states.
+
+## 13. RESPONSIVE DESIGN
+
+Validate the complete application at these exact viewport sizes:
+
+| Device | Resolution |
+|---|---|
+| Mobile | 393 × 764 |
+| Tablet Portrait | 744 × 1133 |
+| Tablet Landscape | 1133 × 744 |
+| Desktop | 1280 × 832 |
+
+Implement adaptive navigation, responsive cards, touch-friendly controls, adaptive composers, and continuous Presence.
+
+Avoid horizontal overflow and preserve visual consistency.
+
+## 14. ENGINEERING REQUIREMENTS
+
+Build on the existing repository.
+
+Before implementation:
+
+1. Inspect the repository.
+2. Inspect design.md.
+3. Inspect all referenced images.
+4. Inspect the UI kit tokens.
+5. Inspect shell and component HTML.
+6. Inspect existing integrations.
+7. Identify existing architectural contracts.
+8. Map screens to functional workflows.
+9. Identify missing dependencies.
+
+Engineering requirements:
+
+- Modular architecture.
+- Strict TypeScript.
+- Reusable components.
+- Separation of UI and business logic.
+- Explicit state management.
+- Validated contracts.
+- Secure authentication.
+- Authorization at execution boundaries.
+- Error handling.
+- Accessibility.
+- Minimal dependencies.
+- No duplicated architecture.
+
+Preserve existing functionality and avoid unnecessary rewrites.
+
+Development fixtures may only be used in isolated development environments. Never mix simulated data with production user data.
+
+## 15. QUALITY ASSURANCE
+
+After implementation:
+
+- Run the application.
+- Validate all six experiences.
+- Validate all required workflows.
+- Test iSpace navigation.
+- Test iVault uploads.
+- Verify storage isolation.
+- Verify Private execution restrictions.
+- Test multilingual switching.
+- Test authentication and authorization.
+- Test keyboard accessibility.
+- Test empty and error states.
+- Inspect browser console.
+- Run TypeScript validation.
+- Run available automated tests.
+- Run production build.
+
+Capture and inspect screenshots at all four required viewport sizes.
+
+Compare each completed screen against its corresponding reference and correct unintended visual differences.
+
+Do not report successful validation for tests that were not actually executed.
+
+## 16. FINAL DELIVERY REPORT
+
+At completion, provide:
+
+### Implemented
+Completed features and validated workflows.
+
+### Integrations
+Connected services and verified capabilities.
+
+### Remaining Dependencies
+External integrations that still require configuration or authorization.
+
+### Validation
+Build status, tests, screenshots, viewport checks, and remaining failures.
+
+### Changed from the mockups
+Every deliberate visual or structural change and its justification.
+
+### Added beyond the mockups
+Every additional workflow, state, interaction, and operational behavior.
+
+---
+
+**FINAL DIRECTIVE**
+
+Build iRiel as one coherent Personal Intelligence Environment.
+
+Do not reduce the product to a visual prototype.
+
+Do not introduce independent architectural foundations.
+
+Do not compromise user sovereignty, privacy, continuity, or provider agnosticism.
+
+Preserve the supplied design language.
+
+Implement the actual product behavior behind every designed interaction.
+
+Use PRSL-AI Ecosystem v6.3 as the authoritative architectural reference.
+
