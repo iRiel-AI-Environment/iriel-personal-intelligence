@@ -1,6 +1,6 @@
-Ensure your package.json exposes these standard commands so both human developers and agents invoke identical checks:
-
 {
+  "private": true,
+  "description": "Ensure your package.json exposes these standard commands so both human developers and agents invoke identical checks.",
   "scripts": {
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -8,5 +8,3 @@ Ensure your package.json exposes these standard commands so both human developer
     "build": "tsc -p tsconfig.build.json"
   }
 }
-
-
